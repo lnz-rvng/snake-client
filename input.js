@@ -1,3 +1,4 @@
+const {moves, messages} = require('./constants')
 let connection;
 
 const sendMovement = (movement) => {
@@ -5,33 +6,33 @@ const sendMovement = (movement) => {
 };
 
 const handleUserMovement = (key) => {
-  if (key === 'w') {
+  if (key === moves.MOVE_UP) {
     sendMovement(`Move: up`);
-  } else if (key === 'a') {
+  } else if (key === moves.MOVE_LEFT) {
     sendMovement(`Move: left`);
-  } else if (key === 's') {
+  } else if (key === moves.MOVE_DOWN) {
     sendMovement(`Move: down`);
-  } else if (key === 'd') {
+  } else if (key === moves.MOVE_RIGHT) {
     sendMovement(`Move: right`);
   }
 };
 
 const sendMessage = (key) => {
-  if (key === ',') {
-    connection.write('Say: Hey');
-  } else if (key === '.') {
-    connection.write('Say: NT');
-  } else if (key === '/') {
-    connection.write('Say: All G');
+  if (key === 'z') {
+    connection.write(`Say: ${messages.z}`);
+  } else if (key === 'x') {
+    connection.write(`Say: ${messages.x}`);
+  } else if (key === 'c') {
+    connection.write(`Say: ${messages.c}`);
   }
 };
 
 const handleUserInput = (key) => {
   if (key === '\u0003') {
     process.exit();
-  } else if (key === 'w' || key === 'a' || key === 's' || key === 'd') {
+  } else if (key === moves.MOVE_UP || key === moves.MOVE_LEFT || key === moves.MOVE_DOWN || key === moves.MOVE_RIGHT) {
     handleUserMovement(key);
-  } else if (key === ',' || key === '.' || key === '/') {
+  } else if (key === 'z' || key === 'x' || key === 'c') {
     sendMessage(key);
   }
 };
