@@ -2,7 +2,8 @@ let connection;
 
 const sendMovement = (movement) => {
   connection.write(movement);
-}
+};
+
 const handleUserMovement = (key) => {
   if (key === 'w') {
     sendMovement(`Move: up`);
@@ -13,13 +14,25 @@ const handleUserMovement = (key) => {
   } else if (key === 'd') {
     sendMovement(`Move: right`);
   }
-}
+};
+
+const sendMessage = (key) => {
+  if (key === ',') {
+    connection.write('Say: Hey');
+  } else if (key === '.') {
+    connection.write('Say: NT');
+  } else if (key === '/') {
+    connection.write('Say: All G');
+  }
+};
 
 const handleUserInput = (key) => {
   if (key === '\u0003') {
     process.exit();
   } else if (key === 'w' || key === 'a' || key === 's' || key === 'd') {
     handleUserMovement(key);
+  } else if (key === ',' || key === '.' || key === '/') {
+    sendMessage(key);
   }
 };
 
