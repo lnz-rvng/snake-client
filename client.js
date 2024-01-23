@@ -7,7 +7,8 @@ const connect = () => {
 
   conn.setEncoding('utf8');
   conn.on('connect', () => {
-    console.log(`You connected to the game`);
+    console.log(`Successfully connected to game server`);
+    conn.write(`Name: LIM`);
 
     conn.on('data', (data) => {
       console.log(data);
