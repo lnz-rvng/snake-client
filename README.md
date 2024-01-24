@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![screenshot of me playing by myself]()
+![screenshot of me playing by myself](./Screenshot%202024-01-24%20152808.png)
 !["screenshot description"](#)
 
 
