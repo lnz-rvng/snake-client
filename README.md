@@ -8,8 +8,10 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot of me playing by myself"](./Screenshot%202024-01-24%20152808.png)
-!["some functionality that I added"](./Screenshot%202024-01-24%20154205.png)
+![screenshot of me playing by myself](./Screenshot%202024-01-24%20152808.png)
+
+
+![some functionality that I added](./Screenshot%202024-01-24%20154703.png)
 
 
 ## Getting Started
