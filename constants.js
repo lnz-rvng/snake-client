@@ -1,22 +1,23 @@
-const IP = 'localhost';
-const PORT = 50541;
+const NETWORK = {
+  IP: 'localhost',
+  PORT: 50541
+}
 
-const moves = {
+const KEY_BINDINGS = {
   MOVE_UP: 'w',
   MOVE_LEFT: 'a',
   MOVE_DOWN: 's',
   MOVE_RIGHT: 'd'
 }
 
-const messages = {
+const MESSAGES = {
   z: 'Hey',
   x: 'Nice',
   c: 'OH NO'
 }
 
 module.exports = {
-  IP,
-  PORT,
-  moves,
-  messages
+  NETWORK,
+  KEY_BINDINGS,
+  MESSAGES
 };
