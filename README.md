@@ -4,17 +4,19 @@ Snake game is a very popular video game. It is a video game concept where the pl
 
 This is simply a multiplayer take on the genre.
 
-Before you can run this client, you will need to be running the server side which you can download and install from here. 
+Before you can run this client, you will need to be running the server side which you can download and install from here: 
+
+https://github.com/taniarascia/snek
+
 
 ## Final Product
 
-![screenshot of me playing by myself](./Screenshot%202024-01-24%20152808.png)
-
-
-![some functionality that I added](./Screenshot%202024-01-24%20154703.png)
+!["Scrrenshot of me playing by myself"](./Screenshot%202024-01-24%20152808.png)
 
 
 ## Getting Started
 
-- Follow steps inside the snek server repo to run the server side
-- Run the development snake client using the `node play.js` command.
+- Follow steps inside the snek server repo to run the server side. 
+- Run the development snake client using the ***`node play.js`*** command. 
+- You can move your snake using the ***`WASD`*** keys. You can also messages snippet using ***`ZXC`*** keys. 
+- If you idled for about 15 seconds, your snake is gonna get bored and the server will kick you out of the game. ❤️

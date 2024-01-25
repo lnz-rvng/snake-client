@@ -1,10 +1,14 @@
-const {KEY_BINDINGS, MESSAGES} = require('./constants')
+const {KEY_BINDINGS, MESSAGES} = require('./constants');
+
+// initializes a variable to connect to the server
 let connection;
 
+// send the movement key that the user presses to the server
 const sendMovement = (movement) => {
   connection.write(movement);
 };
 
+// key bindings
 const handleUserMovement = (key) => {
   if (key === KEY_BINDINGS.MOVE_UP) {
     sendMovement(`Move: up`);
@@ -17,12 +21,14 @@ const handleUserMovement = (key) => {
   }
 };
 
+// messages bindings
 const sendMessage = (key) => {
   const message = MESSAGES[key];
   if (message) {
     connection.write(`Say: ${message}`);
   }
 };
+
 
 const handleUserInput = (key) => {
   if (key === '\u0003') {
@@ -34,6 +40,7 @@ const handleUserInput = (key) => {
   }
 };
 
+// we take the conn as a parameter so we can connect to the server
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
