@@ -11,7 +11,7 @@ https://github.com/taniarascia/snek
 
 ## Final Product
 
-!["Scrrenshot of me playing by myself"](./Screenshot%202024-01-24%20152808.png)
+!["Screenshot of the game"](.//Screenshots/Screenshot%202024-01-24%20152808.png)
 
 
 ## Getting Started
